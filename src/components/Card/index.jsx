@@ -1,8 +1,10 @@
 import styles from "./Card.module.css";
 
-const Card = ({ card, handleChoice, flipped }) => {
+const Card = ({ card, handleChoice, flipped, disabled }) => {
   const handleClick = () => {
-    handleChoice(card);
+    if (!disabled) {
+      handleChoice(card);
+    }
   };
 
   return (
