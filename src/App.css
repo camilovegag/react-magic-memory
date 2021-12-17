@@ -4,7 +4,7 @@
 }
 
 button {
-  background-repeat: 4px;
+  border-radius: 4px;
   background: none;
   border: 2px solid #fff;
   color: #fff;
@@ -21,7 +21,13 @@ button:hover {
 
 .card-grid {
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 40px;
+}
+
+@media (min-width: 800px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
