@@ -1,10 +1,10 @@
 .App {
   margin: 40px auto;
-  max-width: 860px;
+  width: min(85%, 750px);
 }
 
 button {
-  background-repeat: 4px;
+  border-radius: 4px;
   background: none;
   border: 2px solid #fff;
   color: #fff;
@@ -17,4 +17,17 @@ button {
 button:hover {
   background-color: #c23866;
   color: #fff;
+}
+
+.card-grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 40px;
+}
+
+@media (min-width: 800px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
