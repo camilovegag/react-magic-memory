@@ -1,7 +1,7 @@
 {
   "name": "magic-memory",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://camilovegag.github.io/react-magic-memory/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
