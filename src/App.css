@@ -1,6 +1,6 @@
 .App {
   margin: 40px auto;
-  max-width: 860px;
+  width: min(85%, 750px);
 }
 
 button {
