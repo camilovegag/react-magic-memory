@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Card from "./components/Card";
 
 const cardImages = [
   { src: "/img/helmet-1.png" },
@@ -24,20 +25,13 @@ function App() {
     setTurns(0);
   };
 
-  console.log(cards, turns);
-
   return (
     <div className="App">
       <h1>Magic Match</h1>
       <button onClick={shuffleCards}>New Game</button>
       <div className="card-grid">
         {cards.map((card) => (
-          <div className="card" key={card.id}>
-            <div>
-              <img className="front" src={card.src} alt="Card front" />
-              <img className="back" src="/img/cover.png" alt="Card back" />
-            </div>
-          </div>
+          <Card key={card.id} src={card.src} />
         ))}
       </div>
     </div>
