@@ -48,11 +48,9 @@ function App() {
         );
       } else {
       }
-      resetTurn();
+      setTimeout(() => resetTurn(), 1000);
     }
   }, [choiceOne, choiceTwo]);
-
-  console.log(cards);
 
   return (
     <div className="App">
@@ -60,7 +58,12 @@ function App() {
       <button onClick={shuffleCards}>New Game</button>
       <div className="card-grid">
         {cards.map((card) => (
-          <Card key={card.id} card={card} handleChoice={handleChoice} />
+          <Card
+            key={card.id}
+            card={card}
+            handleChoice={handleChoice}
+            flipped={card === choiceOne || card === choiceTwo || card.matched}
+          />
         ))}
       </div>
     </div>
